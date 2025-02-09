@@ -228,8 +228,12 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_footprint_libs": [
+      "WordGameLib"
+    ],
+    "pinned_symbol_libs": [
+      "WordGameLib"
+    ]
   },
   "meta": {
     "filename": "WG-Segment.kicad_pro",
