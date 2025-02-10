@@ -2,7 +2,7 @@
 
 Electronics for the Word Game project.
 
-Dimensions are based on a standard Scrabble board, and therefore
+Dimensions are based on a standard Scrabble board, because this is based on standard Scrabble (don't tell Hasbro/Mattel).
 
 ## Tiles
 
@@ -17,7 +17,7 @@ The size of a single tile is 0.75"x0.75" (19.05x19.05mm), but the internal circu
 The internal board is made up of nine segments.
 These segments each manage a 5x5 section of the 15x15 board.
 
-Each segment consists of a microcontroller, and ADC, an analog multiplexer, a button, and LCD display, and 25 units.
+Each segment consists of a microcontroller with an ADC, some analog multiplexers, 25 LEDs, and 25 tile connection units.
 Each unit is made up of a two-terminal female piece connector and an LED.
 
 <!-- TBD: perhaps use a digital MUX to control MOSFET connections to each piece instead, depending on price -->
