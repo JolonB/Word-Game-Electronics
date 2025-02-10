@@ -821,6 +821,46 @@
         )
       )
     )
+    (symbol "power:PWR_FLAG" (power) (pin_numbers hide) (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "#FLG" (at 0 1.905 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "PWR_FLAG" (at 0 3.81 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "flag power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Special symbol for telling ERC where power comes from" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "PWR_FLAG_0_0"
+        (pin power_out line (at 0 0 90) (length 0)
+          (name "pwr" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "PWR_FLAG_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 1.27)
+            (xy -1.016 1.905)
+            (xy 0 2.54)
+            (xy 1.016 1.905)
+            (xy 0 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+    )
   )
 
   (junction (at 152.4 52.07) (diameter 0) (color 0 0 0 0)
@@ -1333,6 +1373,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 3ae1b4bf-b3be-4ea8-a41e-72cc284b3c9a)
   )
+  (text "I have no idea why this is needed" (at 247.65 147.32 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 46c4ee07-0597-47d0-a571-ad6ed46a6926)
+  )
   (text "Keep resistors near RP2040" (at 82.55 73.66 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 4a2c2623-5354-4021-baae-7fe078091dd2)
@@ -1558,7 +1602,7 @@
   (symbol (lib_id "power:GND") (at 44.45 146.05 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1a430bf4-e76e-4455-8564-111c204d995c)
-    (property "Reference" "#PWR0215" (at 50.8 146.05 0)
+    (property "Reference" "#PWR0216" (at 50.8 146.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 48.26 146.05 90)
@@ -1574,7 +1618,7 @@
     (instances
       (project "WG-Segment"
         (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
-          (reference "#PWR0215") (unit 1)
+          (reference "#PWR0216") (unit 1)
         )
       )
     )
@@ -1640,10 +1684,35 @@
     )
   )
 
+  (symbol (lib_id "power:PWR_FLAG") (at 259.08 154.94 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 222634b8-a974-4fd0-9dbc-94a03df4062e)
+    (property "Reference" "#FLG0201" (at 259.08 153.035 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "PWR_FLAG" (at 259.08 149.86 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 259.08 154.94 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 259.08 154.94 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 4086c7ef-fcff-4ceb-bf6f-f7965115267f))
+    (instances
+      (project "WG-Segment"
+        (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
+          (reference "#FLG0201") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 146.05 144.78 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 330f80fb-3a14-415b-819b-1ce01b06f8f3)
-    (property "Reference" "#PWR0214" (at 146.05 151.13 0)
+    (property "Reference" "#PWR0215" (at 146.05 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 146.05 149.86 0)
@@ -1659,7 +1728,7 @@
     (instances
       (project "WG-Segment"
         (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
-          (reference "#PWR0214") (unit 1)
+          (reference "#PWR0215") (unit 1)
         )
       )
     )
@@ -1695,6 +1764,31 @@
       (project "WG-Segment"
         (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
           (reference "SW201") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 259.08 154.94 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 3b7510d4-1f07-4106-869d-123afa568f11)
+    (property "Reference" "#PWR0217" (at 259.08 151.13 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 259.08 160.02 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 259.08 154.94 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 259.08 154.94 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 485c3741-cb88-4b1f-a638-24172f628519))
+    (instances
+      (project "WG-Segment"
+        (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
+          (reference "#PWR0217") (unit 1)
         )
       )
     )
@@ -1997,6 +2091,31 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 269.24 154.94 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 55ae5638-3b30-44c5-86af-ff65bf42a661)
+    (property "Reference" "#PWR0218" (at 269.24 161.29 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 269.24 160.02 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 269.24 154.94 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 269.24 154.94 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid e449e8c9-63f0-4f52-9715-272bc1832b12))
+    (instances
+      (project "WG-Segment"
+        (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
+          (reference "#PWR0218") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:+3.3V") (at 43.18 80.01 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 58f6b216-3e90-4fc8-8a3d-e77640d7ddc0)
@@ -2162,7 +2281,7 @@
   (symbol (lib_id "power:GND") (at 114.3 133.35 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6e3ed77f-150c-4603-b6dc-9781ee3404c8)
-    (property "Reference" "#PWR0213" (at 114.3 139.7 0)
+    (property "Reference" "#PWR0214" (at 114.3 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 114.3 138.43 0)
@@ -2178,7 +2297,7 @@
     (instances
       (project "WG-Segment"
         (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
-          (reference "#PWR0213") (unit 1)
+          (reference "#PWR0214") (unit 1)
         )
       )
     )
@@ -2686,6 +2805,31 @@
     )
   )
 
+  (symbol (lib_id "power:PWR_FLAG") (at 269.24 154.94 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid ba5a319d-9e20-4ab6-a804-c92ff1b9880e)
+    (property "Reference" "#FLG0202" (at 269.24 153.035 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "PWR_FLAG" (at 269.24 149.86 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 269.24 154.94 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 269.24 154.94 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 4086c7ef-fcff-4ceb-bf6f-f7965115267f))
+    (instances
+      (project "WG-Segment"
+        (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
+          (reference "#FLG0202") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:R") (at 114.3 68.58 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bf217ccf-cce4-4e1a-8cd5-dc526f5e99a6)
@@ -2782,7 +2926,7 @@
   (symbol (lib_id "power:+3.3V") (at 114.3 123.19 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dc10e926-b046-45d5-8486-e265a8233339)
-    (property "Reference" "#PWR0217" (at 114.3 127 0)
+    (property "Reference" "#PWR0213" (at 114.3 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 114.3 118.11 0)
@@ -2798,7 +2942,7 @@
     (instances
       (project "WG-Segment"
         (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
-          (reference "#PWR0217") (unit 1)
+          (reference "#PWR0213") (unit 1)
         )
       )
     )
@@ -2863,8 +3007,8 @@
     (property "Description" "CAP CER 100nF 10V 0402" (at 201.93 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f326b47e-53f3-40f3-a9b6-49c60a2de53f))
-    (pin "2" (uuid d872359f-913e-4733-ab4a-f27c66dbe20c))
+    (pin "1" (uuid f326b47e-53f3-40f3-a9b6-49c60a2de540))
+    (pin "2" (uuid d872359f-913e-4733-ab4a-f27c66dbe20d))
     (instances
       (project "WG-Segment"
         (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
@@ -2912,7 +3056,7 @@
   (symbol (lib_id "power:GND") (at 35.56 157.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f7b0e7c1-c309-461c-b91b-6e182ad9fc8f)
-    (property "Reference" "#PWR0216" (at 35.56 163.83 0)
+    (property "Reference" "#PWR0219" (at 35.56 163.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 35.56 162.56 0)
@@ -2928,7 +3072,7 @@
     (instances
       (project "WG-Segment"
         (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
-          (reference "#PWR0216") (unit 1)
+          (reference "#PWR0219") (unit 1)
         )
       )
     )
