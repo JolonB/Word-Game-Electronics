@@ -785,6 +785,11 @@
     (uuid f581204e-3402-40bd-9d2e-977aef2532cf)
   )
 
+  (label "SW" (at 151.13 69.85 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid ec8d75a3-d65b-4b10-91b7-ac30a1a70a51)
+  )
+
   (global_label "VREF" (shape output) (at 228.6 121.92 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid fb6c947f-a773-4508-9bf3-9fdc57337a25)
