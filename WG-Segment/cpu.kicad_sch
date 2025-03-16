@@ -1746,31 +1746,6 @@
     )
   )
 
-  (symbol (lib_id "power:PWR_FLAG") (at 259.08 154.94 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 222634b8-a974-4fd0-9dbc-94a03df4062e)
-    (property "Reference" "#FLG0201" (at 259.08 153.035 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "PWR_FLAG" (at 259.08 149.86 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 259.08 154.94 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 259.08 154.94 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4086c7ef-fcff-4ceb-bf6f-f7965115267f))
-    (instances
-      (project "WG-Segment"
-        (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
-          (reference "#FLG0201") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Connector_Generic:Conn_01x03") (at 31.75 34.29 0) (mirror y) (unit 1)
     (in_bom no) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid 22c6a10a-d994-4533-8220-82fd67437f62)
@@ -2706,31 +2681,6 @@
       (project "WG-Segment"
         (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
           (reference "R205") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3V3") (at 259.08 154.94 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 9eb71a1a-6b9b-46bd-b369-2a85606e9bc0)
-    (property "Reference" "#PWR0110" (at 259.08 151.13 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3V3" (at 259.08 160.02 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 259.08 154.94 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 259.08 154.94 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 19e1d675-8de8-4818-ac75-6741d531b5c7))
-    (instances
-      (project "WG-Segment"
-        (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
-          (reference "#PWR0110") (unit 1)
         )
       )
     )
