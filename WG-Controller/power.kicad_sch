@@ -1,0 +1,16 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 20d944bd-91aa-41aa-83a2-9b20ef3063bb)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (text "TODO: could copy WG-Segment.\nNeed to confirm that we even need a 5V supply though,\notherwise just do 12V -> 3V3"
+    (at 116.84 86.36 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 065a4d65-80e6-4972-8e58-4905ddfa1f0d)
+  )
+)
