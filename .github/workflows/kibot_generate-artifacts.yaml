@@ -1,0 +1,63 @@
+name: generate-outputs
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ main ]
+    tags: ['v*.*.*']
+  pull_request:
+    branches: [ main ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  segments:
+    runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad8_auto:dev
+    env:
+      directory: WG-Segment
+    strategy:
+      fail-fast: false
+
+    steps:
+    - name: Set up container
+      run: |
+        apt update
+        apt-get install -y zip
+
+    - uses: actions/checkout@v4
+
+    - name: Run ERC
+      working-directory: ${{env.directory}}
+      continue-on-error: true  # TODO remove
+      run: |
+        [ -f ${{env.directory}}.kicad_sch ] && \
+        kiplot -c ../kiplot.kibot.yaml -d fab_${{ github.job }} -s update_xml,run_drc -i
+
+    - name: Generate schematics
+      working-directory: ${{env.directory}}
+      run: |
+        [ -f ${{env.directory}}.kicad_sch ] && \
+        kiplot -c ../kiplot.kibot.yaml -d fab_${{ github.job }} -s run_drc,run_erc print_sch
+
+    - name: Run DRC
+      working-directory: ${{env.directory}}
+      continue-on-error: true  # TODO remove
+      run: |
+        [ -f ${{env.directory}}.kicad_pcb ] && \
+        kiplot -c ../kiplot.kibot.yaml -d fab_${{ github.job }} -s update_xml,run_erc -i
+
+    - name: Generate PCB files
+      working-directory: ${{env.directory}}
+      run: |
+        [ -f ${{env.directory}}.kicad_pcb ] && \
+        kiplot -c ../kiplot.kibot.yaml -d fab_${{ github.job }} -s all print_front print_back print_dimensions gerbers drill
+
+    - name: Retrieve results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ github.job }}_output
+        path: |
+          ${{env.directory}}/fab_${{ github.job }}
+
