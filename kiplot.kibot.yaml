@@ -137,3 +137,19 @@ outputs:
         pth_id: '-PTH'
         npth_id: '-NPTH'
         output: "letter-blocks%i.drl"
+        
+  - name: "bom"
+    comment: "Bill of materials"
+    type: bom
+    options:
+        format: 'CSV'
+        units: 'millimeters'
+        group_fields: ['part', 'part lib', 'value', 'footprint', 'footprint lib', 'voltage', 'tolerance', 'current', 'power', 'description']
+    
+  - name: "position"
+    comment: "Pick and place"
+    type: position
+    options:
+        separate_files_for_front_and_back: true
+        units: 'millimeters'
+    
