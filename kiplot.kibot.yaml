@@ -144,7 +144,15 @@ outputs:
     options:
         format: 'CSV'
         units: 'millimeters'
-        group_fields: ['part', 'part lib', 'value', 'footprint', 'footprint lib', 'voltage', 'tolerance', 'current', 'power', 'description']
+        columns:
+          - "References"
+          - "Part Number"
+          - "Manufacturer"
+          - "Desc"
+          - "Quantity Per PCB"
+          - "Value"
+          - "Footprint"
+          - "Datasheet"
     
   - name: "position"
     comment: "Pick and place"
