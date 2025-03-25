@@ -158,6 +158,18 @@ outputs:
     comment: "Pick and place"
     type: position
     options:
-        separate_files_for_front_and_back: true
+        format: "CSV"
+        separate_files_for_front_and_back: false
         units: 'millimeters'
+        columns:
+          - id: "Ref"
+            name: "Designator"
+          - id: "Pos X"
+            name: "Mid X"
+          - id: "Pos Y"
+            name: "Mid Y"
+          - id: "Side"
+            name: "Layer"
+          - id: "Rot"
+            name: "Rotation"
     
