@@ -164,9 +164,9 @@ outputs:
         columns:
           - id: "Ref"
             name: "Designator"
-          - id: "Pos X"
+          - id: "PosX"
             name: "Mid X"
-          - id: "Pos Y"
+          - id: "PosY"
             name: "Mid Y"
           - id: "Side"
             name: "Layer"
