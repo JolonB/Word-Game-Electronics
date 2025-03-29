@@ -137,3 +137,39 @@ outputs:
         pth_id: '-PTH'
         npth_id: '-NPTH'
         output: "letter-blocks%i.drl"
+        
+  - name: "bom"
+    comment: "Bill of materials"
+    type: bom
+    options:
+        format: 'CSV'
+        units: 'millimeters'
+        columns:
+          - "References"
+          - "Part Number"
+          - "Manufacturer"
+          - "Desc"
+          - "Quantity Per PCB"
+          - "Value"
+          - "Footprint"
+          - "Datasheet"
+    
+  - name: "position"
+    comment: "Pick and place"
+    type: position
+    options:
+        format: "CSV"
+        separate_files_for_front_and_back: false
+        units: 'millimeters'
+        columns:
+          - id: "Ref"
+            name: "Designator"
+          - id: "PosX"
+            name: "Mid X"
+          - id: "PosY"
+            name: "Mid Y"
+          - id: "Side"
+            name: "Layer"
+          - id: "Rot"
+            name: "Rotation"
+    

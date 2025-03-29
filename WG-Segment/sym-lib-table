@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "WordGameLib")(type "KiCad")(uri "${KIPRJMOD}/../WordGameLib.kicad_sym")(options "")(descr "Components used in the Word Game project that don't exist in the KiCad libraries"))
+)
