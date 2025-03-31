@@ -60,6 +60,8 @@ outputs:
       - layers:
         - layer: User.Comments
         - layer: Edge.Cuts
+        - layer: F.SilkS
+        - layer: B.SilkS
 
   - name: 'print_pcb'
     comment: "Print top and bottom layers and dimensions"
@@ -177,6 +179,7 @@ outputs:
           - "Value"
           - "Footprint"
           - "Datasheet"
+          - "LCSC Part"
     
   - name: "position"
     comment: "Pick and place"

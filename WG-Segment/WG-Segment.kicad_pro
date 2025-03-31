@@ -491,6 +491,11 @@
           "name": "Desc",
           "url": false,
           "visible": false
+        },
+        {
+          "name": "LCSC Part",
+          "url": false,
+          "visible": false
         }
       ],
       "intersheets_ref_own_page": false,
