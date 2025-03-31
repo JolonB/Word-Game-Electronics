@@ -1442,6 +1442,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 9f1338ad-e993-4c37-a83e-63a4adcf7cb4)
   )
+  (text "Change this for custom reference voltage" (at 212.09 50.8 0)
+    (effects (font (size 0.635 0.635)) (justify left bottom))
+    (uuid a1378b7e-9ca7-4e71-8187-b237cf017e32)
+  )
   (text "Possibly could\nbe removed" (at 66.04 85.09 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid c86e1b5d-a473-475e-8d11-eaead8075b0a)
@@ -1544,14 +1548,6 @@
   (label "USB_D+" (at 114.3 68.58 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid f7302a50-4907-45de-aaa8-b4484d8741f5)
-  )
-
-  (global_label "VREF" (shape input) (at 209.55 50.8 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid e85eea59-7dfd-45f6-b5c8-2fd39dcb9d9e)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 217.1314 50.8 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
   )
 
   (hierarchical_label "MUX_A" (shape output) (at 191.77 88.9 0) (fields_autoplaced)
@@ -1788,6 +1784,31 @@
       (project "WG-Segment"
         (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
           (reference "J201") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 209.55 50.8 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 22ef1c62-9e29-485a-ac45-839036d71e87)
+    (property "Reference" "#PWR0201" (at 209.55 54.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 209.55 45.72 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 209.55 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 209.55 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 58f8975f-22b7-44e7-a3ae-a105fbf84e9c))
+    (instances
+      (project "WG-Segment"
+        (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/1e0e1cdf-3136-4548-bd2e-0b31b8fba863"
+          (reference "#PWR0201") (unit 1)
         )
       )
     )

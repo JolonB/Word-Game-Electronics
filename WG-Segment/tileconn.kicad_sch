@@ -232,6 +232,58 @@
         )
       )
     )
+    (symbol "power:+3V3" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "+3V3" (at 0 3.556 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"+3V3\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "+3V3_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "+3V3_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "+3V3" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "power:+5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -1201,10 +1253,10 @@
     (uuid 6908e016-5d99-4dc9-9788-d26055c61945)
   )
   (text_box "MUX# | C | B | A | Tile#\n-----|---|---|---|------\n  4  | H | H | H |   1\n  4  | H | L | H |   2\n  4  | H | L | L |   3\n  3  | H | H | H |   4\n  3  | H | H | L |   5\n  3  | H | L | L |   6\n  3  | H | L | H |   7\n  4  | L | H | L |   8\n  4  | L | L | H |   9\n  4  | L | L | L |  10\n  1  | H | L | H |  11\n  1  | H | H | H |  12\n  1  | H | L | L |  13\n  3  | L | L | L |  14\n  3  | L | H | L |  15\n  2  | H | L | L |  16\n  2  | H | H | H |  17\n  2  | H | L | H |  18\n  1  | H | H | L |  19\n  1  | L | L | L |  20\n  1  | L | L | H |  21\n  1  | L | H | L |  22\n  2  | L | L | L |  23\n  2  | L | L | H |  24\n  2  | L | H | L |  25"
-    (at 110.49 52.07 0) (size 34.29 83.82)
+    (at 106.68 52.07 0) (size 40.64 83.82)
     (stroke (width 0) (type default))
     (fill (type color) (color 255 229 191 1))
-    (effects (font (face "Ubuntu Mono") (size 1.8 1.8) (thickness 0.254) bold) (justify left top))
+    (effects (font (face "DejaVu Sans Mono") (size 1.8 1.8) (thickness 0.254) bold) (justify left top))
     (uuid e0dd8fa0-a92c-4246-9416-881f789b9241)
   )
 
@@ -1414,14 +1466,6 @@
     (uuid ff091980-d045-4998-be82-672cbac1c5b9)
   )
 
-  (global_label "VREF" (shape input) (at 238.76 41.91 90) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 89fbf1fa-a467-47d2-a2fa-ec1ed22731b9)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 238.76 34.3286 90)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-
   (hierarchical_label "MUX_~{EN}_2" (shape input) (at 43.18 90.17 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 0b8bfca5-2e78-4718-acca-c2009ec8c547)
@@ -1488,6 +1532,31 @@
       (project "WG-Segment"
         (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/2b040784-7c57-4701-9a06-95f5fc63b367"
           (reference "J506") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 238.76 41.91 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 016df691-9003-4961-8632-7c58f075e9c7)
+    (property "Reference" "#PWR0515" (at 238.76 45.72 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 238.76 36.83 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 238.76 41.91 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 238.76 41.91 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid ec7a33eb-404b-46ad-9c1b-2af46cc7a51b))
+    (instances
+      (project "WG-Segment"
+        (path "/9a5339e6-f970-4986-a2cb-f70ab323b7e1/2b040784-7c57-4701-9a06-95f5fc63b367"
+          (reference "#PWR0515") (unit 1)
         )
       )
     )
