@@ -13,7 +13,7 @@ on:
 jobs:
   segments:
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad8_auto:dev
+    container: ghcr.io/inti-cmnb/kicad7_auto:dev
     env:
       directory: WG-Segment
     strategy:
@@ -38,7 +38,7 @@ jobs:
       working-directory: ${{env.directory}}
       run: |
         [ -f ${{env.directory}}.kicad_sch ] && \
-        kiplot -c ../kiplot.kibot.yaml -d fab_${{ github.job }} -s run_drc,run_erc print_sch
+        kiplot -c ../kiplot.kibot.yaml -d fab_${{ github.job }} -s run_drc,run_erc print_sch bom
 
     - name: Run DRC
       working-directory: ${{env.directory}}
@@ -51,7 +51,7 @@ jobs:
       working-directory: ${{env.directory}}
       run: |
         [ -f ${{env.directory}}.kicad_pcb ] && \
-        kiplot -c ../kiplot.kibot.yaml -d fab_${{ github.job }} -s all print_front print_back print_dimensions gerbers drill
+        kiplot -c ../kiplot.kibot.yaml -d fab_${{ github.job }} -s all print_front print_back print_dimensions gerbers-4 drill position
 
     - name: Retrieve results
       if: always()
